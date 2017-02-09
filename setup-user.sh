@@ -1,7 +1,7 @@
 #!/bin/bash -xe
 echo '* Unziping CoolQ ...'
 cd ~/cqzip
-unzip *.zip
+7z x -scs936 *.zip
 mkdir ~/coolq
 mv */* ~/coolq
 cd ~

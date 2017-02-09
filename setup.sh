@@ -7,7 +7,7 @@ add-apt-repository -y ppa:wine/wine-builds
 echo '* Add 32 arch support ...'
 dpkg --add-architecture i386
 echo '* Install requirements ...'
-apt-get install -y xorg openbox xrdp cabextract unzip language-pack-zh-hans
+apt-get install -y xorg openbox xrdp cabextract unzip language-pack-zh-hans p7zip-full
 echo '* Install wine ...'
 apt-get update
 apt-get install -y --install-recommends winehq-devel
