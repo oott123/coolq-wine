@@ -29,7 +29,7 @@ wget -O ./coolq.zip $CQURL
 mkdir $cqHome/cqzip
 cp ./coolq.zip $cqHome/cqzip
 chown -R $cqUser:$cqUser $cqHome/cqzip
-cat ./setup-user.sh | sudo -u $cqUser bash -xe
+cat ./setup-user.sh | sudo -Hu $cqUser bash -xe
 echo "* Set password for $cqUser ..."
 passwd $cqUser
 echo <<EOF
