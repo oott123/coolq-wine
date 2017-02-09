@@ -1,15 +1,15 @@
 #!/bin/bash -xe
 cqUser=coolq
 echo '* Prepare add-apt-repository ...'
-apt install -y software-properties-common python-software-properties python3-software-properties
+apt-get install -y software-properties-common python-software-properties python3-software-properties
 echo '* Add wine ppa ...'
 add-apt-repository ppa:wine/wine-builds
 echo '* Add 32 arch support ...'
 dpkg --add-architecture i386
 echo '* Install requirements ...'
-apt install -y xorg openbox xrdp cabextract unzip language-pack-zh-hans
+apt-get install -y xorg openbox xrdp cabextract unzip language-pack-zh-hans
 echo '* Install wine ...'
-apt install -y --install-recommends winehq-devel
+apt-get install -y --install-recommends winehq-devel
 echo '* Install winetricks ...'
 wget -O /usr/local/bin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
 chmod 755 /usr/local/bin/winetricks
