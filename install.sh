@@ -14,9 +14,9 @@ fi
 if [ "$DOWN_WINE" == 'yes' ]; then
     wget -O ./wine.tar.gz $binPrefix/wine.tar.gz
 fi
-echo 'Preparing [1/3] Updating apt database ...'
+echo 'Preparing [2/3] Updating apt database ...'
 apt-get update > /dev/null
-echo 'Preparing [2/3] Installing byobu ...'
+echo 'Preparing [3/3] Installing byobu ...'
 apt-get install -y byobu > /dev/null
-echo 'Preparing [3/3] Execute script using byobu ...'
+echo 'Starting ...'
 byobu new-session bash -e ./setup-wrapper.sh
