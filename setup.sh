@@ -4,12 +4,12 @@ echo '* Prepare add-apt-repository ...'
 apt-get install -y software-properties-common python-software-properties python3-software-properties
 echo '* Add wine ppa ...'
 add-apt-repository -y ppa:wine/wine-builds
-apt-get update
 echo '* Add 32 arch support ...'
 dpkg --add-architecture i386
 echo '* Install requirements ...'
 apt-get install -y xorg openbox xrdp cabextract unzip language-pack-zh-hans
 echo '* Install wine ...'
+apt-get update
 apt-get install -y --install-recommends winehq-devel
 echo '* Install winetricks ...'
 wget -O /usr/local/bin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
