@@ -19,4 +19,4 @@ apt-get update > /dev/null
 echo 'Preparing [3/3] Installing byobu ...'
 apt-get install -y byobu > /dev/null
 echo 'Starting ...'
-byobu new-session bash -e ./setup-wrapper.sh
+byobu new-session bash ./setup-wrapper.sh

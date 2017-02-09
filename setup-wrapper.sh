@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 touch log-stdout.log
 touch log-stderr.log
 echo `date` >> log-stdout.log
