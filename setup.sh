@@ -4,6 +4,7 @@ echo '* Prepare add-apt-repository ...'
 apt-get install -y software-properties-common python-software-properties python3-software-properties
 echo '* Add wine ppa ...'
 add-apt-repository -y ppa:wine/wine-builds
+apt-get update
 echo '* Add 32 arch support ...'
 dpkg --add-architecture i386
 echo '* Install requirements ...'
