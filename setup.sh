@@ -1,4 +1,9 @@
 #!/bin/bash -xe
+if [ `arch` == 'x86_64' ]; then
+    arch=64
+else
+    arch=86
+fi
 cqUser=coolq
 echo '* Prepare add-apt-repository ...'
 apt-get install -y software-properties-common python-software-properties python3-software-properties
@@ -18,7 +23,7 @@ echo '* Setting up user ...'
 adduser --disabled-password --gecos "" $cqUser
 cqHome=$( getent passwd "$cqUser" | cut -d: -f6 )
 if [ -f ./prefix.tar.gz ]; then
-    cp ./prefix.tar.gz $cqHome/prefix.tar.gz
+    cp ./prefix-$arch.tar.gz $cqHome/prefix.tar.gz
     chown $cqUser:$cqUser $cqHome/prefix.tar.gz
 fi
 echo '* Downloading CoolQ ...'
